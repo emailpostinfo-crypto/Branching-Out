@@ -8,20 +8,32 @@ def load_users(filepath="users.json"):
 
 def filter_users_by_name(users, name):
     filtered_users = [user for user in users if user.get("name", "").lower() == name.lower()]
-    for user in filtered_users:
-        print(user)
+
+    if not filtered_users:
+        print("No users with that name found.")
+    else:
+        for user in filtered_users:
+            print(user)
 
 
 def filter_users_by_age(users, age):
     filtered_users = [user for user in users if user.get("age") == age]
-    for user in filtered_users:
-        print(user)
+
+    if not filtered_users:
+        print("No users with that age found.")
+    else:
+        for user in filtered_users:
+            print(user)
 
 
 def filter_users_by_email(users, email):
     filtered_users = [user for user in users if user.get("email", "").lower() == email.lower()]
-    for user in filtered_users:
-        print(user)
+
+    if not filtered_users:
+        print("No users with that email found.")
+    else:
+        for user in filtered_users:
+            print(user)
 
 
 def main():
